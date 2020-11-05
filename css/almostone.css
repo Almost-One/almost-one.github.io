@@ -404,16 +404,16 @@ a {
 }
 
 #almostone .content .farm .join button:hover, #almostone .content .farm .leave button:hover {
-  border: 2px solid #234f76;
+  border: 2px solid #081B2F;
 }
 
 #almostone .content .farm .join button.disabled, #almostone .content .farm .leave button.disabled {
-  background-color: #234f76;
+  background-color: #081B2F;
   cursor: inherit;
 }
 
 #almostone .content .farm .join button.disabled:hover, #almostone .content .farm .leave button.disabled:hover {
-  border: 2px solid #CE273C;
+  border: 2px solid #081B2F;
 }
 
 #almostone .content .farm .button50 {
@@ -432,8 +432,8 @@ a {
           justify-content: space-between;
   outline: 0;
   border: 0;
-  background-color: #CE273C;
-  border: 2px solid #CE273C;
+  background-color: #081B2F;
+  border: 2px solid #081B2F;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -450,12 +450,12 @@ a {
 }
 
 #almostone .content .farm .button50 button.harvest.disabled, #almostone .content .farm .button50 button.approve.disabled {
-  background-color: #234f76;
+  background-color: #081B2F;
   cursor: inherit;
 }
 
 #almostone .content .farm .button50 button.harvest.disabled:hover, #almostone .content .farm .button50 button.approve.disabled:hover {
-  border: 2px solid #CE273C;
+  border: 2px solid ##081B2F;
 }
 
 #almostone .content .farm .button50 button.approve {
