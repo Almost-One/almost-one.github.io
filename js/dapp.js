@@ -190,14 +190,14 @@ async function pooled3() {
 
 async function pooled6() {
     
-    await farm.methods.totalPooledBPT3().call().then(r => {
+    await farm.methods.totalPooledBPT6().call().then(r => {
         document.getElementById("pooled6").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
     });
 }
 
 async function pooled12() {
     
-    await farm.methods.totalPooledBPT3().call().then(r => {
+    await farm.methods.totalPooledBPT12().call().then(r => {
         document.getElementById("pooled12").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
     });
 }
