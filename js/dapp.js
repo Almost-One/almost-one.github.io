@@ -38,6 +38,7 @@ async function startWeb3() {
     pooled3();
     pooled6();
     pooled12();
+    pooledBalance();
 
     var stakeButton = document.getElementById('stake_button');
 
