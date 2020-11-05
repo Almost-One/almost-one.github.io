@@ -34,6 +34,10 @@ async function startWeb3() {
     pool3();
     pool6();
     pool12();
+    totalPooled();
+    pooled3();
+    pooled6();
+    pooled12();
 
     var stakeButton = document.getElementById('stake_button');
 
@@ -143,21 +147,50 @@ async function approve() {
 async function pool3() {
     
     await farm.methods.getPooledBalance3(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("staked_balance3").innerHTML = Number(web3.utils.fromWei(r)).toFixed(13);
+        document.getElementById("staked_balance3").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
     });
 }
 
 async function pool6() {
     
     await farm.methods.getPooledBalance6(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("staked_balance6").innerHTML = Number(web3.utils.fromWei(r)).toFixed(13);
+        document.getElementById("staked_balance6").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
     });
 }
 
 async function pool12() {
     
     await farm.methods.getPooledBalance12(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("staked_balance12").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+        document.getElementById("staked_balance12").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
+    });
+}
+
+
+async function totalPooled() {
+    
+    await farm.methods.totalPoolSum().call().then(r => {
+        document.getElementById("total_pooled").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
+    });
+}
+
+async function pooled3() {
+    
+    await farm.methods.totalPooledBPT3().call().then(r => {
+        document.getElementById("pooled3").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
+    });
+}
+
+async function pooled6() {
+    
+    await farm.methods.totalPooledBPT3().call().then(r => {
+        document.getElementById("pooled6").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
+    });
+}
+
+async function pooled12() {
+    
+    await farm.methods.totalPooledBPT3().call().then(r => {
+        document.getElementById("pooled12").innerHTML = Number(web3.utils.fromWei(r)).toFixed(2);
     });
 }
 
