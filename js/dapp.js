@@ -113,7 +113,7 @@ async function withdraw12() {
 async function aoBalance() {
     
     await ao.methods.balanceOf(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("aoalance").value = Number(web3.utils.fromWei(r)).toFixed(7);
+        document.getElementById("aoalance").innerHTML = Number(web3.utils.fromWei(r)).toFixed(7);
     });
 }
 
