@@ -138,9 +138,9 @@ async function pool() {
     await farm.methods.pooled(ethereum.selectedAddress).call().then(r => {
        
         (lastBlockChecked, rewards, staked3, staked6, staked12, last3, last6, last12) = r;
-        document.getElementById("staked_balance3").innerHTML = pooledBalance3;
-        document.getElementById("staked_balance6").innerHTML = pooledBalance6;
-        document.getElementById("staked_balance12").innerHTML = pooledBalance12;
+        document.getElementById("staked_balance3").innerHTML = staked3;
+        document.getElementById("staked_balance6").innerHTML = staked6;
+        document.getElementById("staked_balance12").innerHTML = staked12;
 
     });
 }
