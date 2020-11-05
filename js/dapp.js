@@ -23,7 +23,8 @@ var staked12;
 var last3;
 var last6;
 var last12;
-
+var lastBlockChecked
+var rewards;
 
 
 
