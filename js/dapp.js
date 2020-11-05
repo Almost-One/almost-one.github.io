@@ -35,7 +35,7 @@ async function startWeb3() {
     aoBalance();
     bptBalance();
     pending();
-    pool();
+    //pool();
 
     var stakeButton = document.getElementById('stake_button');
 
