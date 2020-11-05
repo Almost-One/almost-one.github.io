@@ -128,6 +128,13 @@ async function bptBalance() {
     });
 }
 
+async function pooledBalance() {
+    
+    await farm.methods.pooledBalance().call().then(r => {
+        document.getElementById("pool_balance").innerHTML = Number(web3.utils.fromWei(r)).toFixed(7);
+    });
+}
+
 async function pending() {
     
     await farm.methods.pendingReward(ethereum.selectedAddress).call().then(r => {
