@@ -20,11 +20,7 @@ var balanceBPT;
 var staked3;
 var staked6;
 var staked12;
-var last3;
-var last6;
-var last12;
-var lastBlockChecked;
-var rewards;
+
 
 
 
@@ -35,7 +31,9 @@ async function startWeb3() {
     aoBalance();
     bptBalance();
     pending();
-    //pool();
+    pool3();
+    pool6();
+    pool12();
 
     var stakeButton = document.getElementById('stake_button');
 
@@ -134,18 +132,6 @@ async function pending() {
     });
 }
 
-async function pool() {
-    
-    await farm.methods.pooled(ethereum.selectedAddress).call().then(r => {
-       
-        (lastBlockChecked, rewards, staked3, staked6, staked12, last3, last6, last12) = r;
-        document.getElementById("staked_balance3").innerHTML = staked3;
-        document.getElementById("staked_balance6").innerHTML = staked6;
-        document.getElementById("staked_balance12").innerHTML = staked12;
-
-    });
-}
-
 
 async function approve() {
 
@@ -154,6 +140,29 @@ async function approve() {
         console.log(receipt);
     });
 }
+
+async function pool3() {
+    
+    await farm.methods.getPooledBalance3(ethereum.selectedAddress).call().then(r => {
+        document.getElementById("staked_balance3").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+    });
+}
+
+async function pool6() {
+    
+    await farm.methods.getPooledBalance6(ethereum.selectedAddress).call().then(r => {
+        document.getElementById("staked_balance6").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+    });
+}
+
+async function pool12() {
+    
+    await farm.methods.getPooledBalance12(ethereum.selectedAddress).call().then(r => {
+        document.getElementById("staked_balance12").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+    });
+}
+
+
 
 
 
