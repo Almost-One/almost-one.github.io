@@ -20,6 +20,9 @@ var balanceBPT;
 var staked3;
 var staked6;
 var staked12;
+var last3;
+var last6;
+var last12;
 
 
 
@@ -31,6 +34,7 @@ async function startWeb3() {
     aoBalance();
     bptBalance();
     pending();
+    pool();
 
     var stakeButton = document.getElementById('stake_button');
 
@@ -126,6 +130,18 @@ async function pending() {
     
     await farm.methods.pendingReward(ethereum.selectedAddress).call().then(r => {
         document.getElementById("pending_reward").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+    });
+}
+
+async function pool() {
+    
+    await farm.methods.pooled(ethereum.selectedAddress).call().then(r => {
+       
+        (lastBlockChecked, rewards, staked3, staked6, staked12, last3, last6, last12) = r;
+        document.getElementById("staked_balance3").innerHTML = pooledBalance3;
+        document.getElementById("staked_balance6").innerHTML = pooledBalance6;
+        document.getElementById("staked_balance12").innerHTML = pooledBalance12;
+
     });
 }
 
