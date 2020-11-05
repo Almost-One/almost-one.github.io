@@ -114,7 +114,7 @@ async function aoBalance() {
     
     await ao.methods.balanceOf(ethereum.selectedAddress).call().then(r => {
         document.getElementById("ao_balance").innerHTML = Number(web3.utils.fromWei(r)).toFixed(7);
-        document.getElementById("aoalance").innerHTML = Number(web3.utils.fromWei(r)).toFixed(7);
+        document.getElementById("aoalance").value = Number(web3.utils.fromWei(r)).toFixed(7);
     });
 }
 
@@ -128,7 +128,7 @@ async function bptBalance() {
 async function pending() {
     
     await farm.methods.pendingReward(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("pending_reward").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+        document.getElementById("pending_reward").innerHTML = Number(web3.utils.fromWei(r)).toFixed(13);
     });
 }
 
@@ -144,14 +144,14 @@ async function approve() {
 async function pool3() {
     
     await farm.methods.getPooledBalance3(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("staked_balance3").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+        document.getElementById("staked_balance3").innerHTML = Number(web3.utils.fromWei(r)).toFixed(13);
     });
 }
 
 async function pool6() {
     
     await farm.methods.getPooledBalance6(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("staked_balance6").innerHTML = Number(web3.utils.fromWei(r)).toFixed(18);
+        document.getElementById("staked_balance6").innerHTML = Number(web3.utils.fromWei(r)).toFixed(13);
     });
 }
 
