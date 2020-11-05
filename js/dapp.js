@@ -53,12 +53,11 @@ async function checkAllowance(owner, spender) {
 }
 
 async function stake() {
-    if (allowance == 0) {
-        console.log(formul.miSelect.value);
-        approve();
-    } else if (allowance > 0) {
-        
-    }
+    stake3();
+}
+
+async function withdraw() {
+    withdraw3();
 }
 
 async function claim() {
@@ -115,6 +114,7 @@ async function aoBalance() {
     
     await ao.methods.balanceOf(ethereum.selectedAddress).call().then(r => {
         document.getElementById("ao_balance").innerHTML = Number(web3.utils.fromWei(r)).toFixed(7);
+        document.getElementById("aoalance").innerHTML = Number(web3.utils.fromWei(r)).toFixed(7);
     });
 }
 
