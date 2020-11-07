@@ -67,7 +67,7 @@ async function stake() {
     stake3();
 }
 
-async function withdraw() {
+async function unstake() {
     withdraw3();
 }
 
