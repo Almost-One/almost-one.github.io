@@ -20,6 +20,9 @@ var balanceBPT;
 var staked3;
 var staked6;
 var staked12;
+var last3;
+var last6;
+var last12;
 
 
 
@@ -39,6 +42,9 @@ async function startWeb3() {
     pooled6();
     pooled12();
     pooledBalance();
+    /*time3();
+    time6();
+    time12();*/
 
     var stakeButton = document.getElementById('stake_button');
 
@@ -50,7 +56,7 @@ async function checkAllowance(owner, spender) {
     await bpt.methods.allowance(owner, spender).call().then(r => {
         allowance = Number(r);
             if (allowance == 0) {
-        stakeButton.innerHTML = 'Allow';
+        stakeButton.innerHTML = 'Approve';
     } else if (allowanceFMA > 0) {
         stakeButton.innerHTML = 'Stake';
     }
@@ -202,6 +208,25 @@ async function pooled12() {
     });
 }
 
+/* 
+async function time3() {
+    
+    await farm.methods.getLast3().call().then(r => {
+    });
+}
+
+async function time6() {
+    
+    await farm.methods.getLast6().call().then(r => {
+    });
+}
+
+async function time12() {
+    
+    await farm.methods.getLast12().call().then(r => {
+    });
+}
+*/
 
 
 
