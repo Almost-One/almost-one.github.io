@@ -79,42 +79,42 @@ async function claim() {
 
 async function stake3() {
     var amount = await document.getElementById("deposit_amount").value;
-    await farm.methods.stakePool3(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 100000}).on('receipt', function(receipt) {
+    await farm.methods.stakePool3(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 133333}).on('receipt', function(receipt) {
         console.log(receipt);
     });
 }
 
 async function stake6() {
     var amount = await document.getElementById("deposit_amount").value;
-    await farm.methods.stakePool6(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 100000}).on('receipt', function(receipt) {
+    await farm.methods.stakePool6(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 133333}).on('receipt', function(receipt) {
         console.log(receipt);
     });
 }
 
 async function stake12() {
     var amount = await document.getElementById("deposit_amount").value;
-    await farm.methods.stakePool12(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 100000}).on('receipt', function(receipt) {
+    await farm.methods.stakePool12(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 133333}).on('receipt', function(receipt) {
         console.log(receipt);
     });
 }
 
 async function withdraw3() {
     var amount = await document.getElementById("withdraw_amount").value;
-    await farm.methods.withdrawPool3(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 100000}).on('receipt', function(receipt) {
+    await farm.methods.withdrawPool3(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 133333}).on('receipt', function(receipt) {
         console.log(receipt);
     });
 }
 
 async function withdraw6() {
     var amount = await document.getElementById("withdraw_amount").value;
-    await farm.methods.withdrawPool6(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 100000}).on('receipt', function(receipt) {
+    await farm.methods.withdrawPool6(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 133333}).on('receipt', function(receipt) {
         console.log(receipt);
     });
 }
 
 async function withdraw12() {
     var amount = await document.getElementById("withdraw_amount").value;
-    await farm.methods.withdrawPool12(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 100000}).on('receipt', function(receipt) {
+    await farm.methods.withdrawPool12(convert(amount, "ether", "wei")).send( {from: web3.givenProvider.selectedAddress, gas: 133333}).on('receipt', function(receipt) {
         console.log(receipt);
     });
 }
@@ -153,7 +153,7 @@ async function pending() {
 async function approve() {
 
     var amount = "9999999999999999999999999999999";
-    await bpt.methods.approve(farmAddress, amount).send( {from: web3.givenProvider.selectedAddress, gas: 100000}).on('receipt', function(receipt) {
+    await bpt.methods.approve(farmAddress, amount).send( {from: web3.givenProvider.selectedAddress, gas: 133333}).on('receipt', function(receipt) {
         console.log(receipt);
     });
 }
