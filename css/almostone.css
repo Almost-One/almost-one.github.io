@@ -339,8 +339,8 @@ a {
   width: 100%;
   text-align: center;
   padding: 0.5rem;
-  background-color: #CE273C;
-  border: 2px solid #CE273C;
+  background-color: #081B2F;
+  border: 2px solid #081B2F;
   border-radius: 0.7rem;
   font-weight: 700;
 }
@@ -390,8 +390,8 @@ a {
 #almostone .content .farm .join button, #almostone .content .farm .leave button {
   outline: 0;
   border: 0;
-  background-color: #CE273C;
-  border: 2px solid #CE273C;
+  background-color: #081B2F;
+  border: 2px solid #081B2F;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -446,7 +446,7 @@ a {
 }
 
 #almostone .content .farm .button50 button.harvest:hover, #almostone .content .farm .button50 button.approve:hover {
-  border: 2px solid #234f76;
+  border: 2px solid #C13942;
 }
 
 #almostone .content .farm .button50 button.harvest.disabled, #almostone .content .farm .button50 button.approve.disabled {
