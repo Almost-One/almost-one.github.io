@@ -42,6 +42,10 @@ async function startWeb3() {
     pooled6();
     pooled12();
     pooledBalance();
+    earned3();
+    earned6();
+    earned12();
+    //earnedTotal();
     /*time3();
     time6();
     time12();*/
@@ -227,6 +231,40 @@ async function time12() {
     });
 }
 */
+
+async function earned3() {
+    
+    await farm.methods.getPooledBalance3(ethereum.selectedAddress).call().then(r => {
+        perday3 = Number(web3.utils.fromWei(r)*6500/500000000000).toFixed(9);
+        document.getElementById("earned3").innerHTML = perday3;
+    });
+}
+
+async function earned6() {
+    
+    await farm.methods.totalPooledBPT12().call().then(r => {
+        perday6 = Number(web3.utils.fromWei(r)*6500/400000000000).toFixed(9);
+        document.getElementById("earned6").innerHTML = perday6;
+    });
+}
+
+async function earned12() {
+    
+    await farm.methods.totalPooledBPT12().call().then(r => {
+        perday12 = Number(web3.utils.fromWei(r)*6500/333333333333).toFixed(9);
+        document.getElementById("earned12").innerHTML = perday12;
+    });
+}
+
+/*
+async function earnedTotal() {
+    document.getElementById("earnedTotal").innerHTML = 0;
+} */
+
+async function maxwithdraw() {
+    document.getElementById("withdraw_amount").value = document.getElementById("pooled3").innerHTML;
+}
+
 
 
 
