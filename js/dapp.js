@@ -68,11 +68,29 @@ async function checkAllowance(owner, spender) {
 }
 
 async function stake() {
-    stake3();
+    var timeToStake = $("#timeToStake").val();
+
+    if(timeToStake == 3)
+        stake3();
+    else if (timeToStake == 6)
+        stake6();
+    else if (timeToStake == 12)
+        stake12();
+    else
+        alert("Invalid time to stake value")
 }
 
 async function unstake() {
-    withdraw3();
+    var timeToUnstake = $("#timeToUnstake").val();
+
+    if(timeToUnstake == 3)
+        withdraw3();
+    else if (timeToUnstake == 6)
+        withdraw6();
+    else if (timeToUnstake == 12)
+        withdraw12();
+    else
+        alert("Invalid time to unstake value")
 }
 
 async function claim() {
