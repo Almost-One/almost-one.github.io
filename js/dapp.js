@@ -26,6 +26,7 @@ var last12;
 var perday3;
 var perday6;
 var perday12;
+var perdayTotal;
 
 
 
@@ -279,7 +280,8 @@ async function earned12() {
 }
 
 async function earnedTotal() {
-    document.getElementById("earnedTotal").innerHTML = perday3 + perday6 + perday12;
+    perdayTotal = perday3 + perday6 + perday12;
+    document.getElementById("earnedTotal").innerHTML = perdayTotal;
 }
 
 async function maxdeposit() {
