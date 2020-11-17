@@ -153,7 +153,8 @@ async function aoBalance() {
 async function bptBalance() {
     
     await bpt.methods.balanceOf(ethereum.selectedAddress).call().then(r => {
-        document.getElementById("bpt_balance").innerHTML = Number(web3.utils.fromWei(r)).toFixed(7);
+        balanceBPT = Number(web3.utils.fromWei(r)).toFixed(7);
+	document.getElementById("bpt_balance").innerHTML = balanceBPT;
     });
 }
 
@@ -278,6 +279,10 @@ async function earned12() {
 async function earnedTotal() {
     document.getElementById("earnedTotal").innerHTML = 0;
 } */
+
+async function maxdeposit() {
+    document.getElementById("withdraw_amount").value = balanceBPT;
+}
 
 async function maxwithdraw() {
     document.getElementById("withdraw_amount").value = document.getElementById("pooled3").innerHTML;
