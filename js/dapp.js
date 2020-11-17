@@ -48,7 +48,7 @@ async function startWeb3() {
     earned3();
     earned6();
     earned12();
-    //earnedTotal();
+    earnedTotal();
     /*time3();
     time6();
     time12();*/
@@ -278,10 +278,9 @@ async function earned12() {
     });
 }
 
-/*
 async function earnedTotal() {
-    document.getElementById("earnedTotal").innerHTML = 0;
-} */
+    document.getElementById("earnedTotal").innerHTML = perday3 + perday6 + perday12;
+}
 
 async function maxdeposit() {
     document.getElementById("deposit_amount").value = balanceBPT;
