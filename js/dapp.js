@@ -281,7 +281,7 @@ async function earnedTotal() {
 } */
 
 async function maxdeposit() {
-    document.getElementById("withdraw_amount").value = balanceBPT;
+    document.getElementById("deposit_amount").value = balanceBPT;
 }
 
 async function maxwithdraw() {
