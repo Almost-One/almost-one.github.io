@@ -264,7 +264,7 @@ async function earned3() {
 
 async function earned6() {
     
-    await farm.methods.totalPooledBPT12().call().then(r => {
+    await farm.methods.getPooledBalance6(ethereum.selectedAddress).call().then(r => {
         perday6 = Number(web3.utils.fromWei(r)*6500/400000000000).toFixed(9);
         document.getElementById("earned6").innerHTML = perday6;
     });
@@ -272,7 +272,7 @@ async function earned6() {
 
 async function earned12() {
     
-    await farm.methods.totalPooledBPT12().call().then(r => {
+    await farm.methods.getPooledBalance12(ethereum.selectedAddress).call().then(r => {
         perday12 = Number(web3.utils.fromWei(r)*6500/333333333333).toFixed(9);
         document.getElementById("earned12").innerHTML = perday12;
     });
