@@ -23,6 +23,9 @@ var staked12;
 var last3;
 var last6;
 var last12;
+var perday3;
+var perday6;
+var perday12;
 
 
 
@@ -285,7 +288,17 @@ async function maxdeposit() {
 }
 
 async function maxwithdraw() {
-    document.getElementById("withdraw_amount").value = document.getElementById("pooled3").innerHTML;
+	
+    var timeToUnstake = $("#timeToUnstake").val();
+
+    if(timeToUnstake == 3)
+        document.getElementById("withdraw_amount").value = document.getElementById("staked_balance3").innerHTML;
+    else if (timeToUnstake == 6)
+        document.getElementById("withdraw_amount").value = document.getElementById("staked_balance6").innerHTML;
+    else if (timeToUnstake == 12)
+        document.getElementById("withdraw_amount").value =document.getElementById("staked_balance12").innerHTML;
+    else
+        alert("Invalid time to unstake value")
 }
 
 
